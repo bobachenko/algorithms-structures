@@ -1,14 +1,34 @@
 package org.bobachenko.learn.algorithms;
 
+
+/**
+ * Merge sort 
+ * Complexity O(N × logN)
+ * @author max
+ *
+ */
 public class MergeSort implements Sort {
 
 	@Override
 	public void sort(int[] array) {
-		split(array, 0, array.length-1);
+		int[] result = split(array, 0, array.length-1);
+		System.arraycopy(result, 0, array, 0, result.length );
 	}
 	
-	int[] split(int[] a, int form, int to) {
-		return null;
+	int[] split(int[] a, int from, int to) {
+		if(from==to) 
+			return new int[]{a[to]};		
+		
+		int half = (to - from) / 2;
+		
+		int from1 = from;
+		int to1 = from + half;
+		
+		int from2 = to1+1;
+		int to2 = to;
+		
+		// a couple recursive calls firstly split then merge
+		return merge(split(a, from1, to1), split(a, from2, to2));
 	}
 
 	int[] merge(int[] a1, int[] a2) {

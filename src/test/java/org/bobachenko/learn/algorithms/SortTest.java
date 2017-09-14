@@ -1,5 +1,6 @@
 package org.bobachenko.learn.algorithms;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 public class SortTest extends BaseTest {
@@ -35,6 +36,7 @@ public class SortTest extends BaseTest {
     	int[] a2 = {2, 3, 5};
     	
     	int[] result = new MergeSort().merge(a1, a2);
+    	Assert.assertArrayEquals(result, new int[]{1, 2, 3, 4, 5, 7, 9});
     	printArr(result);
     }
 }
