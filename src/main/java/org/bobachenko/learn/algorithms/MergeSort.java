@@ -2,7 +2,7 @@ package org.bobachenko.learn.algorithms;
 
 
 /**
- * Merge sort 
+ * Сортировка слиянием 
  * Complexity O(N × logN)
  * @author max
  *
@@ -27,7 +27,7 @@ public class MergeSort implements Sort {
 		int from2 = to1+1;
 		int to2 = to;
 		
-		// a couple recursive calls firstly split then merge
+		// a couple recursive calls, firstly split then merge
 		return merge(split(a, from1, to1), split(a, from2, to2));
 	}
 
