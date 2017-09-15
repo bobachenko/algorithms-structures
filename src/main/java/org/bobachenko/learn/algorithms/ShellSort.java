@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * Сортировка Шелла
- * 
+ * Average complexity O(N^3/2). Depends on count of elements.
  * @author max
  *
  */
