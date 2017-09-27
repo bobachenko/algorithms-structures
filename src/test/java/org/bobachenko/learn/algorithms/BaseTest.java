@@ -36,8 +36,7 @@ public class BaseTest {
 				Assert.fail("Array is not sorted.");
 			}
 			last = i;
-		}
-		printArr(array);
+		}		
 	}
 	
 	protected void printArr(int[] array) {
@@ -48,5 +47,6 @@ public class BaseTest {
     	int[] array = getTestData();
     	sort.sort(array);
     	validate(array);    
+    	printArr(array);
 	}
 }
